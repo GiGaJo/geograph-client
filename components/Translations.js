@@ -1,7 +1,5 @@
 import React, { Component } from "react";
 import { gql, graphql } from "react-apollo";
-import logo from "./logo.svg";
-import "./App.css";
 
 const myQuery = gql`
   {
@@ -15,9 +13,8 @@ const myQuery = gql`
   }
 `;
 
-class App extends Component {
+class Translation extends Component {
   render() {
-    console.log(this.props);
     const content = this.props.data.byCountry || { translations: [] };
     const translations = content.translations.map(t => (
       <li key={t.language}>
@@ -36,4 +33,4 @@ class App extends Component {
   }
 }
 
-export default graphql(myQuery)(App);
+export default graphql(myQuery)(Translation);
