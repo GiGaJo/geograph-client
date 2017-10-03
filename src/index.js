@@ -11,7 +11,7 @@ import App from "./App";
 
 const client = new ApolloClient({
   networkInterface: createNetworkInterface({
-    uri: "https://geograph-api.now.sh/"
+    uri: "https://geograph-api.now.sh"
   })
 });
 
